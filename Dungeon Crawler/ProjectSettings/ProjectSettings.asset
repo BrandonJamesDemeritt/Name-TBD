@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: f66d5ecf70032274986cdd82cce8e367
+  productGUID: 0b764c17a19511d4f9774681a91d9ba1
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: RPG Dungeon Crawler
+  productName: Dungeon Crawler
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -629,14 +629,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: RPG Dungeon Crawler
+  metroPackageName: Dungeon Crawler
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: RPG Dungeon Crawler
+  metroApplicationDescription: Dungeon Crawler
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -704,10 +704,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 1153d2cf-6ddc-44a6-b9ec-fe8612b42a03
+  cloudProjectId: 33b53f37-ccb6-478c-923d-9a05ed562066
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: RPG Dungeon Crawler 2024-02-22_15-07-33
+  projectName: Dungeon Crawler
   organizationId: racso84278
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
