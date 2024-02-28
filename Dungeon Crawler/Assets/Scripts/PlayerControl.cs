@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+// Video Andrew used for this code
+// https://www.youtube.com/watch?v=DBGvx-cCUMw&ab_channel=EPICALUX-GameDev @ 9:00 minutes
+
 public class PlayerControl : MonoBehaviour
 {
     public float moveSpeed;
