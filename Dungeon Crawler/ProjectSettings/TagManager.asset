@@ -50,3 +50,9 @@ TagManager:
   - name: Player
     uniqueID: 2752432163
     locked: 0
+  - name: Enemies
+    uniqueID: 3053785547
+    locked: 0
+  - name: Door
+    uniqueID: 1445106537
+    locked: 0

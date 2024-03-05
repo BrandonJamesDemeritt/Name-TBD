@@ -2,48 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-// Video Andrew used for this code
-// https://www.youtube.com/watch?v=DBGvx-cCUMw&ab_channel=EPICALUX-GameDev @ 9:00 minutes
-
-public class PlayerControl : MonoBehaviour
+public class PlayerControl2 : MonoBehaviour
 {
-    public float moveSpeed;
+    [SerializeField] private float movementSpeed = 2f;
 
-    private bool isMoving;
+    private Rigidbody2D rb;
 
-    private Vector2 input;
+    private Vector2 movementDirection;
 
-    private void Update()
+    public LayerMask solidObjectsLayer;
+
+    void Start()
     {
-        if (!isMoving)
-        {
-            input.x = Input.GetAxisRaw("Horizontal");
-            input.y = Input.GetAxisRaw("Vertical");
-
-            if (input != Vector2.zero)
-            {
-                var targetPos = transform.position;
-                targetPos.x += input.x;
-                targetPos.y += input.y;
-
-                StartCoroutine(Move(targetPos));
-            }
-        }
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    IEnumerator Move(Vector3 targetPos)
+    // Update is called once per frame
+    void Update()
     {
-        isMoving = true;
+        movementDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+    }
 
-        while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
+    private void FixedUpdate()
+    {
+        var targetPos = transform.position;
+        if (isWalkable(targetPos))
         {
-            targetPos = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
-            yield return null;
+            rb.velocity = movementDirection * movementSpeed;
         }
-        transform.position = targetPos;
+            
+    }
 
-        isMoving = false;
+    private bool isWalkable(Vector3 targetPos)
+    {
+        if (Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectsLayer) != null)
+        {
+            return false;
+        }
+
+        return true;
     }
 }
