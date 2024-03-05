@@ -46,8 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df0ad9b9f47f5f347ac8cfec97c434e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  direction: {x: 0, y: 0}
 --- !u!198 &6535659912777862418
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -3640,9 +3638,9 @@ ParticleSystem:
   CollisionModule:
     enabled: 1
     serializedVersion: 4
-    type: 0
+    type: 1
     collisionMode: 1
-    colliderForce: 0
+    colliderForce: 15
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1

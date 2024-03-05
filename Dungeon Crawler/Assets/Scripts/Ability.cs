@@ -45,6 +45,18 @@ public class Ability : MonoBehaviour
         {
             //Not implemented yet
         }//end if
-    }
+
+        //This is for Torches, which light up when hit with fire
+        if (other.tag == "torch" && this.tag == "fire")
+        {
+            other.gameObject.GetComponent<Torch>().MakeTorchLit();
+        }//end if
+
+        //This is for Lit Torches, which are unlit when hit with wind
+        if (other.tag == "torch" && this.tag == "wind")
+        {
+            other.gameObject.GetComponent<Torch>().MakeTorchUnlit();
+        }//end if
+    }//end OnParticleCollision
 
 }
