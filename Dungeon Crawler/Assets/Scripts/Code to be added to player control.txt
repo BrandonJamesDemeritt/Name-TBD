@@ -1,0 +1,42 @@
+Add this code to beginning of the class
+
+[SerializeField]
+private GameObject ability; //The ability of the player. player 1 uses flames. player 2 uses wind. Should contain a particle system
+[SerializeField]
+private KeyCode abilityInput; //Key to be pressed to activate the players ability
+[SerializeField]
+private int startRotationX; //The starting rotation of the ability's x-axis
+
+Add this code in the update function
+
+add this wherever you control going left
+
+//Rotates the ability to the left
+startRotationX = 180;
+
+add this wherever you control going right
+
+//Rotates the ability to the right
+startRotationX = 0;
+
+add this wherever you control going up
+
+//Rotates the ability up
+startRotationX = -90;
+
+add this wherever you control going down
+
+//Rotates the ability down
+startRotationX = 90;
+
+add this to the bottom of the update function
+
+if (Input.GetKeyDown(abilityInput))
+{
+	ability.transform.rotation = Quaternion.Euler(startRotationX, 90, 90);
+	ability.GetComponent<ParticleSystem>().Play();
+}//end if
+if (Input.GetKeyUp(abilityInput))
+{
+        ability.GetComponent<ParticleSystem>().Stop();
+}//end if
