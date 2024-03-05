@@ -9,6 +9,7 @@ public class EnemyFollowPlayer : MonoBehaviour
 {
     public float speed;
     public float lineOfSite;
+    
     private Transform player;
     void Start()
     {
@@ -18,17 +19,20 @@ public class EnemyFollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distanceFromPlater = Vector2.Distance(player.position, transform.position);
-        if (distanceFromPlater < lineOfSite)
+        float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
+        if (distanceFromPlayer < lineOfSite)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
+            lineOfSite = 100;
         }
-            
+        
     }
 
-    private void OnFrawGizmosSelected()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, lineOfSite);
     }
+
+
 }
