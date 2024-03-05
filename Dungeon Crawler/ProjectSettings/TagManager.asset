@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - fire
+  - wind
+  - torch
+  - flammable
+  - AffectedByWind
   layers:
   - Default
   - TransparentFX
