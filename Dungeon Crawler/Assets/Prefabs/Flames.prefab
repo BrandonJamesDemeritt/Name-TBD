@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8958894361635585432}
   - component: {fileID: 1898084106248873599}
   - component: {fileID: 8456601288494588959}
+  - component: {fileID: -3375909033056732788}
   m_Layer: 8
   m_Name: Flames
   m_TagString: fire
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 234084341408793714}
   serializedVersion: 2
   m_LocalRotation: {x: 0.52844626, y: 0.48084912, z: 0.5174927, w: 0.47088218}
-  m_LocalPosition: {x: -1.656366, y: -2.65, z: -3.07}
+  m_LocalPosition: {x: -2.009, y: -2.509, z: -3.049}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3658,7 +3659,7 @@ ParticleSystem:
     collisionMode: 1
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
-    multiplyColliderForceByParticleSpeed: 0
+    multiplyColliderForceByParticleSpeed: 1
     multiplyColliderForceByCollisionAngle: 1
     m_Planes: []
     m_Dampen:
@@ -3770,7 +3771,7 @@ ParticleSystem:
     m_EnergyLossOnCollision:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -3825,7 +3826,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 1207
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -4863,3 +4864,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-3375909033056732788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234084341408793714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47bf89ad4ea6d64a9bca2ee63b99af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
